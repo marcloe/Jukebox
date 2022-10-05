@@ -20,7 +20,9 @@ allButtons.forEach(button => {
         } else if (e.target.dataset.chosen == "false") {
             e.target.classList.add("chosen");
             e.target.dataset.chosen = true;
+            //toggle animation!
             e.target.style.animationPlayState = 'running';
+            //toggle audio
             audioElement.play();
         };
     });
