@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: white;
+    padding: 20px;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.grid {
+    width: 800px;
+    height:800px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+button {
+    background-color: rgb(250, 235, 215);
+    border: none;
+    color:rgb(74, 74, 74);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+     margin: 10px;
+    transform: scale(1);
+    animation: pulse-black 2s infinite;
+}
+
+@keyframes pulse-black {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(247, 157, 48, 0.7);
+    }
+    
+    70% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+.chosen {
+    background-color: rgb(231, 206, 176);
+}
+
+button:hover {
+    background-color: rgb(231, 206, 176);
+}
+
+#generateButton {
+    background-color: rgb(245, 200, 124);
+    border: none;
+    color:rgb(74, 74, 74);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+
