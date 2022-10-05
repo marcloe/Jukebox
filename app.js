@@ -6,6 +6,8 @@ allButtons.forEach(button => {
     button.style.animationPlayState = "paused";
 });
 
+//Test!!!
+//2222
 allButtons.forEach(button => {
     button.addEventListener("click", function(e) {
         let audioElement = this.querySelector("audio");
