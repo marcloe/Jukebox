@@ -1,3 +1,5 @@
+let switchAmbient = false;
+
 
 // Selector-Disselector-Mechanism
 
@@ -6,8 +8,6 @@ allButtons.forEach(button => {
     button.style.animationPlayState = "paused";
 });
 
-//Test!!!
-//2222
 allButtons.forEach(button => {
     button.addEventListener("click", function(e) {
         let audioElement = this.querySelector("audio");
@@ -29,3 +29,15 @@ allButtons.forEach(button => {
         };
     });
 });
+
+
+document.getElementById("generateButton").addEventListener("click", function() {
+    console.log("check");
+    if (switchAmbient==true) {
+        console.log("check");
+        document.getElementById("ambientPlayer").getElementsByTagName("source").src="ambient/ambient2.mp3"
+    };
+    switchAmbient = true;
+});
+
+

@@ -86,4 +86,36 @@ button:hover {
     font-family: sans-serif;
 }
 
+#backButton {
+    background-color: rgb(245, 200, 124);
+    border: none;
+    color:rgb(74, 74, 74);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: sans-serif;
+    margin-top: 100px;
+}
 
+
+#ambientPlayer {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(250, 235, 215);
+    border: none;
+    color:rgb(74, 74, 74);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 10px;
+    transform: scale(1);
+    animation: pulse-black 2s infinite;
+}
