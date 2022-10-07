@@ -10,6 +10,9 @@ let audioElements = new Array();
 console.log(allButtons);
 console.log("audioElements")
 
+
+
+
 // Selector-Disselector-Mechanism
 
 allButtons.forEach(elem => {
@@ -40,12 +43,15 @@ for (let i=0; i < allButtons.length; i++) {
     });
 };
 
+
+
+
+
 // State management Result Page
 
 document.getElementById("generateButton").addEventListener("click", function(e) {
 
     //Check if one sound is picked at least
-
     allButtons.forEach(button => {
         if (button.dataset.chosen == "true") {
             onePicked = true;
@@ -83,7 +89,6 @@ document.getElementById("generateButton").addEventListener("click", function(e) 
     } else {
 
         //All the stuff that recreates the selection page
-
         e.target.innerHTML = "Generate";
         document.getElementsByClassName("result")[0].style.visibility = "hidden";
         switchResult = false;
