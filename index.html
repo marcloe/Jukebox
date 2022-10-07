@@ -8,21 +8,31 @@
 </head>
     <body>
         <div class="wrapper">
+
+            <!--Buttons-->
             <div class="grid">
-                <!--Buttons-->
                 <button id="button1" data-chosen ="false"><audio src="sounds/sound1.mp3"></audio><img src="icons/icon1.svg" alt="" height="50%" width="50%"></button>
-                <button id="button2" data-chosen ="false">sound2<audio src="sounds/sound2.mp3"></audio><img src="icons/icon2.svg" alt="" height="50%" width="50%"></button>
-                <button id="button3" data-chosen ="false">sound3<audio src="sounds/sound3.mp3"></audio><img src="icons/icon3.svg" alt="" height="50%" width="50%"></button>
-                <button id="button4" data-chosen ="false">sound4<audio src="sounds/sound4.mp3"></audio><img src="icons/icon4.svg" alt="" height="50%" width="50%"></button>
-                <button id="button5" data-chosen ="false">sound5<audio src="sounds/sound5.mp3"></audio><img src="icons/icon5.svg" alt="" height="50%" width="50%"></button>
-                <button id="button6" data-chosen ="false">sound6<audio src="sounds/sound6.mp3"></audio><img src="icons/icon6.svg" alt="" height="50%" width="50%"></button>
+                <button id="button2" data-chosen ="false"><audio src="sounds/sound2.mp3"></audio><img src="icons/icon2.png" alt="" height="50%" width="50%"></button>
+                <button id="button3" data-chosen ="false"><audio src="sounds/sound3.mp3"></audio><img src="icons/icon3.svg" alt="" height="50%" width="50%"></button>
+                <button id="button4" data-chosen ="false"><audio src="sounds/sound4.mp3"></audio><img src="icons/icon4.svg" alt="" height="50%" width="50%"></button>
+                <button id="button5" data-chosen ="false"><audio src="sounds/sound5.mp3"></audio><img src="icons/icon5.svg" alt="" height="50%" width="50%"></button>
+                <button id="button6" data-chosen ="false"><audio src="sounds/sound6.mp3"></audio><img src="icons/icon6.svg" alt="" height="50%" width="50%"></button>
                 <button id="button7" data-chosen ="false"><audio src="sounds/Sound7.wav"></audio><img src="icons/icon7.svg" alt="" height="50%" width="50%"></button>
                 <button id="button8" data-chosen ="false"><audio src="sounds/Sound8.wav"></audio><img src="icons/icon8.svg" alt="" height="50%" width="50%"></button>
                 <button id="button9" data-chosen ="false"><audio src="sounds/Sound9.wav"></audio><img src="icons/icon9.svg" alt="" height="50%" width="50%"></button>
                 <button id="button10" data-chosen ="false"><audio src="sounds/Sound10.wav"></audio><img src="icons/icon10.svg" alt="" height="50%" width="50%"></button>
             </div>
-            <!-- GeneratorButton -->
-            <a href="result.html" id="generate"><div id="generateButton">Generate</div></a>
+
+            <!--Jukebox-Overlay-->
+            <div class="result">
+                <div id="ambientPlayer"><audio src="ambient/ambient1.mp3"></audio><img src="icons/icon11.svg" alt="" height="50%" width="50%"></div>
+            </div>
+
+            <!--GeneratorButton-->
+
+        </div>
+        <div class="wrapper2">
+            <div id="generateButton">Generate</div>
         </div>
         <script src="app.js"></script>
     </body>
