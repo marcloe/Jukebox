@@ -1,6 +1,8 @@
 //Declarations and Inis
 
+let onePicked = false;
 let switchResult = false;
+let nextRound = false;
 let ambientAudio = document.getElementsByClassName("result")[0].querySelector("audio");
 let allButtons = document.querySelectorAll("button");
 let audioElements = new Array();
@@ -41,8 +43,29 @@ for (let i=0; i < allButtons.length; i++) {
 // State management Result Page
 
 document.getElementById("generateButton").addEventListener("click", function(e) {
-    console.log("check");
-    if(switchResult==false) {
+
+    //Check if one sound is picked at least
+
+    allButtons.forEach(button => {
+        if (button.dataset.chosen == "true") {
+            onePicked = true;
+            return;
+        }
+    });
+
+    if(switchResult==false && onePicked == true) {
+        //All the stuff that creates the result page is in this block:
+        onePicked = false;
+        
+        //Switch Ambient Sound every round
+        if (nextRound == true) {
+            ambientAudio.src = "ambient/ambient2.mp3";
+            nextRound = false;
+        } else {
+            ambientAudio.src = "ambient/ambient1.mp3";
+            nextRound = true;
+        };
+
         e.target.innerHTML = "Back";
         document.getElementsByClassName("result")[0].style.visibility = "visible";
         switchResult = true;
@@ -56,7 +79,11 @@ document.getElementById("generateButton").addEventListener("click", function(e) 
             allButtons[r].style.animationPlayState = 'paused';
         }
         ambientAudio.play();
+
     } else {
+
+        //All the stuff that recreates the selection page
+
         e.target.innerHTML = "Generate";
         document.getElementsByClassName("result")[0].style.visibility = "hidden";
         switchResult = false;
